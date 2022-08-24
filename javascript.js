@@ -13,17 +13,6 @@ let e = document.getElementById('display2');
 
 var f = document.getElementById("tipamount");
 var g = document.getElementById("total");
-function clear() {
-    bill.value = 0;
-    tip.value = 0;
-    nop.value = 1;
-    document.getElementById("outputPart").style.display = "none";
-    f.innerText = 0;
-    g.innerText = 0;
-
-  //  f.style.display = "none";
-//g.style.display = "none";
-}
 //f.style.display = "none";
 //g.style.display = "none";
 
@@ -45,7 +34,7 @@ function calculate() {
    
    
         d.innerText = Math.round(tipx);
-        e.innerText = Math.round(tipx + a/c);
+        e.innerText = Math.round(tipx + a);
        
        
     console.log(bill.value);

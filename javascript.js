@@ -1,6 +1,3 @@
-//document.write("<h1>Hi</h1>");
-
-
 var bill = document.getElementById('BillAmount');
 
 var tip = document.getElementById('Tip');
@@ -9,12 +6,14 @@ var nop = document.getElementById('Split');
 
 let d = document.getElementById('display1');
 let e = document.getElementById('display2');
+let i = document.getElementById('display3');
+let k = document.getElementById('display4');
 
 
 var f = document.getElementById("tipamount");
 var g = document.getElementById("total");
-//f.style.display = "none";
-//g.style.display = "none";
+var h = document.getElementById("totaltipamount");
+var j = document.getElementById("totalamount"); 
 
 
 
@@ -23,7 +22,9 @@ function calculate() {
     let b = parseInt(tip.value);
     let c = parseInt(nop.value);
     f.style.display = "block";
-    g.style.display = "block"
+    g.style.display = "block";
+    h.style.display = "block";
+    j.style.display = "block";
     
     let tipx = a / c;
     tipx = (tipx * b) / 100;
@@ -33,8 +34,10 @@ function calculate() {
    
    
    
-        d.innerText = Math.round(tipx);
-        e.innerText = Math.round(tipx + a);
+        d.innerText = parseInt(tipx);
+        e.innerText = parseInt(tipx + a/c);
+        i.innerText = parseInt(tipx * c);
+        k.innerText = parseInt((tipx + a/c) * c);
        
        
     console.log(bill.value);
